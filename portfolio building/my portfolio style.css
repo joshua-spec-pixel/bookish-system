@@ -1,0 +1,69 @@
+h1 {
+	animation: fadeIn 2s linear;
+  	color: #f1dec9;
+  	font-family: "Georgia", serif;
+  	margin: 0;
+}
+
+h3 {
+	color: #f1dec9;
+  	font-family: "Georgia", serif;
+  	margin: 0;
+}
+@keyframes fadeIn {
+  from { opacity: 0; letter-spacing: 0.5em; }
+  to { opacity: 1; letter-spacing: normal; }
+}
+
+body {
+	font-size: 20px;
+	color: #f8f6f2;
+	background: linear-gradient(#9a7b78, #54363b) no-repeat;
+	min-height: 100vh;
+	font-family: "Georgia", serif;
+}
+
+button {
+	display: center;
+	background: linear-gradient(#54363b, #9a7b78);
+	font-size: 20px;
+	font-family: "Baskerville", serif;
+	color: white;
+	cursor: pointer;
+	width: 200px;
+	height: 100px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+	gap: 10px;
+	grid-column: 10px;
+	justify-content: center;
+	border-radius: 30px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	background-image: 
+}
+
+.projects {
+	display: flex;         
+	justify-content: center;    
+	gap: 20px;                  
+  	flex-wrap: wrap;           
+  	margin-top: 20px;
+  	co
+}
+
+.project {
+	display: flex;
+	align-items: center;
+	gap: 20px; 
+	border-bottom: 1px solid rgba(241, 222, 201, 0.3);
+}
+
+@media (max-width: 700px) {
+	.project {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+.knight {
+	float: right;
+}
