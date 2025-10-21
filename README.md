@@ -1,17 +1,18 @@
 1. Home page:
-<img width="995" height="615" alt="image" src="https://github.com/user-attachments/assets/3428fe3f-3220-42ce-9fcf-a370063368d4" />
-
+   <img width="995" height="615" alt="image" src="https://github.com/user-attachments/assets/6ba6f209-2bcd-4d8c-8cc3-d8dfc2345acf" />
+   
 2. Project V:
-<img width="1006" height="1573" alt="image" src="https://github.com/user-attachments/assets/ba07c89f-f2a8-4305-9c06-67296cd32b7e" />
+   <img width="1006" height="1837" alt="image" src="https://github.com/user-attachments/assets/06e1d4f0-95ad-491a-bd7e-0abde8b91802" />
 
 3. Project T:
-<img width="1007" height="1339" alt="image" src="https://github.com/user-attachments/assets/89dd6031-42b8-4cf2-a988-be9e1015a49f" />
+   <img width="1007" height="1408" alt="image" src="https://github.com/user-attachments/assets/a7b9740b-7ba2-4ab7-af3e-bb0c4aa6d063" />
 
 4. Project 2C:
-<img width="1007" height="1442" alt="image" src="https://github.com/user-attachments/assets/221a4791-92fb-495f-ad22-526ac5173df3" />
+   <img width="1007" height="1442" alt="image" src="https://github.com/user-attachments/assets/c6edadee-ea7e-4f33-898d-6a18bd6d41dd" />
+
 
 5. Project MT:
-<img width="1007" height="1562" alt="image" src="https://github.com/user-attachments/assets/08f3a832-82d5-4693-872f-c6b4a5aad7c6" />
+   <img width="1007" height="1562" alt="image" src="https://github.com/user-attachments/assets/a3ad70af-03de-44ab-81db-c3d191fe3eaa" />
 
 Check out my portfolio:
 
