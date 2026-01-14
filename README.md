@@ -1,10 +1,11 @@
 # My Bookish Portfolio
 
 ### 1. Home page:
-   <img width="995" height="615" alt="image" src="https://github.com/user-attachments/assets/6ba6f209-2bcd-4d8c-8cc3-d8dfc2345acf" />
+<img width="1007" height="1983" alt="Screenshot 2026-01-14 at 20-25-01 My Portfolio" src="https://github.com/user-attachments/assets/b89592da-a48b-4d4b-86ec-33665ba1d6b4"/>
    
 ### 2. Project V:
-   <img width="1006" height="1837" alt="image" src="https://github.com/user-attachments/assets/06e1d4f0-95ad-491a-bd7e-0abde8b91802" />
+
+https://github.com/user-attachments/assets/f0c9ac5a-c0e4-4bb9-b331-2974d647f2b3
 
 ### 3. Project T:
    <img width="1007" height="1408" alt="image" src="https://github.com/user-attachments/assets/a7b9740b-7ba2-4ab7-af3e-bb0c4aa6d063" />
