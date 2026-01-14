@@ -1,40 +1,87 @@
 <!DOCTYPE html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="timer journal style.css" rel="stylesheet" />
 	<title>Project V</title>
 </head>
 <body>
-		<h1>The Vintage Journal-Timer</h1>
+	<header>
+		<h1>Project V: The Vintage Journal-Timer</h1>
+		<hr>	
+		<h2><u><i>About The Project</i></u></h2>
+		<p class = "hero-summary">A blend of classically designed journaling and timing systems to make deep work feel ritualistic <br>Inspired by chess discipline and temporal focus</p>
+	</header>
+		<hr>
 
-		<h2>The Menu Window</h2>
+	<section>
+		<h2><u><i>What Problem This Solves</i></u></h2>
+		<p>
+			Most productivity tools focus on urgency and speed. <br>Project V restructure work, shifting it from hectic, frantic, grunt work to disciplined, reflective and purposeful tasks, helping users escape dopamine loops.
+		</p>		
+	</section>
+	<hr>
+
+	<h2><u><i>Key Screens</i></u></h2>
+
+		<h2 class = "screens">The Menu Window</h2>
+		<section class = "fade-in">
 		<img src="menu.png">
+		<p>Entry point for a less grunt and more cermonious start</p>
+		</section>
+		<hr>
 
-		<h2>The Journal Window</h2>
+		<h2 class = "screens">The Journal Window</h2>
+		<section class = "fade-in">
 		<img src="proj-journ.png">
+		<p>Endless journalling page to reflect on thoughts and ideas <br>Save them and revisit anytime</p>
+		</section>
+		<hr>
 
-		<h2>The Timer Window</h2>
+		<h2 class = "screens">The Timer Window</h2>
+		<section class= "fade-in">	
 		<img src="proj-timer.png">
+		<p>Modus operandi of pomodoro timer for disciplined, deep work and not for urgency</p>
+		</section>
+		<hr>
 
-		<h2>About The Project</h2>
-		<p>The Vintage Journal-Timer codenamed <b>'Project V'</b>, is a timekeeping companion for chess enthusiasts, crafted with precision and a hint of flair.
+		<h2><i><u>Why it's Designed This Way</u></i></h2>
+		<p class = "motivation">Influenced by the idea of persistent habits like journalling and time keeping, <br>I built this tool to encourage consistency over intensity. The vintage aesthetic reinforces calm focus and purposeful action.</p>
 
-		<h3><u>My motivation</u></h3>As someone fascinated by both chess and the art of timing, I wanted a tool that could elegantly track moves, journal thoughts, and add a dash of personality to every work and game.
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const fadeElements = document.querySelectorAll('.fade-in')
 
-		<h3><u>Features</u></h3>
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('is-visible')
+						} else {
+							entry.target.classList.remove('is-visible');
+						}
+					}); 
+					threshold: 0.2;
+					rootMargin: "0px 0px -15% 0px"
+				});
+
+				fadeElements.forEach(el => observer.observe(el))
+			});
+		</script>
+
+		<h2><i><u>Features</u></i></h2>
 		<ul>
 			<li>Interactive timer for work and break</li>
 			<li>Journal, annotate, save and load notes</li>
 			<li>Old money-retro styled interface, easy-to-use</li>
 		</ul>
-		<h3><u>Tech Stack</u></h3>
+		<h2><i><u>Tech Stack</u></i></h2>
 		<ul>
-			<li><b>Python</b></li>
-			<li><b>Tkinter library</b> to design the GUI</li>
-			<li><b>Threading library</b> to run multiple windows indepenently and simultaneously</li>
-			<li><b>Time library</b> for the timer window</li>
+			<li>Python (core logic)</li>
+			<li>Tkinter library (GUI system)</li>
+			<li>Threading (concurrent window handling)</li>
+			<li>Time library (precise timing)</li>
 		</ul>
 		<a href = "https://github.com/joshua-spec-pixel/autumn-hussars/blob/main/autumn%20hussars.py">
-		<button type="button"><b>Project V: Source Code</b></button>
+		<button type="button"><b>Enter the archive</b></button>
 	</a>
 		</p>
 </body>
