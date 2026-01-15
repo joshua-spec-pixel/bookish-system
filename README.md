@@ -4,7 +4,7 @@
 <img width="1007" height="1983" alt="Screenshot 2026-01-14 at 20-25-01 My Portfolio" src="https://github.com/user-attachments/assets/b89592da-a48b-4d4b-86ec-33665ba1d6b4"/>
    
 ### 2. Project V:
-![Uploading project v.gif…]()
+<img width="1080" height="1920" alt="White Blue Minimalist Geometric Photo Collage Your Story" src="https://github.com/user-attachments/assets/f013d009-dfc4-4608-81b0-d5baeeb94121" />
 
 ### 3. Project T:
    <img width="1007" height="1408" alt="image" src="https://github.com/user-attachments/assets/a7b9740b-7ba2-4ab7-af3e-bb0c4aa6d063" />
