@@ -4,30 +4,73 @@
 	<title>Project 2C</title>
 </head>
 <body>
+	<header>	
 		<h1>The Caesar Cipher</h1>
+		<hr>
+		<h2><u><i>About The Project</i></u></h2>
+		<p class = "hero-summary">
+			The Caesar Cipher is a classic encryption and decryption tool to comprehend the functioning of cryptography.
+		</p>
+	</header>
+	<hr>
 
-		<h2>About The Project</h2>
-		<p>The Caesar Cipher, codenamed, <b>'Project 2C'</b>, is classic encryption and decryption utility powered by both Python and interactive web technologies.
-		<img src="cc window.png" alt="Menu Screenshot">
-		<button id="test-cipher"><a href="caesar cipher test.html">Click here to encrypt and decrypt</a></button>
+	<section><h2><u><i>What Problem This Solves</i></u></h2>
+		<p>
+			Project 2C implements the Caesar cipher algorithm with a clean, user-friendly interface for real-time encryption and decryption, demonstrating both classical cryptography fundamentals and modern UX design.	
+		</p>
+	</section>
+	<hr>
 
-		<h3><u>My motivation</u></h3>The Caesar Cipher is one of the oldest and most iconic encryption methods. I built this project to help users experiment with how shifting letters can transform messages, making cryptography easy to understand and fun to use.
-		
-		<h3><u>Features</u></h3>
+	<h2><u><i>Key Screen</i></u></h2>
+	<section class="fade-in">
+		<img src = "cc window.png" alt = "Menu Screenshot">
+	</section>
+		<button id = "test-cipher">
+			<a href = "caesar cipher test.html">
+				Click here to encrypt and decrypt
+			</a>
+		</button>
+	<hr>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const fadeElements = document.querySelectorAll('.fade-in')
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('is-visible')
+					} else {
+						entry.target.classList.remove('is-visible');
+					}
+				});
+				threshold: 0.2;
+				rootMargin: "0px 0px 15% 0px" 
+			});
+			fadeElements.forEach(el => observer.observe(el))
+		});
+	</script>
+		<h2><u><i>Why it's Designed This Way</i></u></h2>
+		<p class = "motivation">
+			I built Project 2C to make classical cryptography accessible. The Caesar cipher is one of history's oldest encryption methods. <br>This tool lets users experiment with letter-shifting algorithms hands-on, turning abstract security concepts into something tangible and engaging.
+		</p>
+
+		<h2><u><i>Features</i></u></h2>
 		<ul>
 		<li>Encrypts and decrypts text using the Caesar Cipher algorithm</li>  
 		<li>Handles both uppercase and lowercase letters</li>
 		<li>Input validation for shift values and mode</li>
 		<li>Interactive demo for instant results</li>
 		</ul>
-		<h3><u>Tech Stack</u></h3>
+
+		<h2><u><i>Tech Stack</i></u></h2>
 		<ul>
-			<li><b>Python</b>, the raw code</li>
-			<li><b>JavaScript</b> for browser interactivity</li>
-			<li><b>HTML</b> and <b>CSS</b> for clean, sleek aesthetic UI</li>
+			<li>Python(core logic, click 'Enter the archive' to access the code)</li>
+			<li>JavaScript for browser interactivity</li>
+			<li>HTML and CSS for clean, sleek UI</li>
 			</ul>
 		<a href = "https://github.com/joshua-spec-pixel/caesar-cipher/blob/main/caesar%20cipher.py">
-		<button type="button"><b>Project 2C: Source Code</b></button>
+		<button type="button"><b>Enter the archive</b></button>
 	</a>
 		</p>
 </body>
