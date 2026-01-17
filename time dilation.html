@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <head>
-	<title>Project T</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Project P</title>
 </head>
+
 <style>
+  .container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+header {
+  background:
+      radial-gradient(
+        circle at top,
+        rgba(0,0,0,0.08),
+        transparent 70%
+      );
+    padding: 40px 40px 10px;
+    border-radius: 24px;  
+}
+
 	body {
-  background: linear-gradient(270deg, #a69886, #8c5637) no-repeat;
+    background: linear-gradient(
+      180deg, 
+      #a69886 0%,
+      #9a7b6a 25%,
+      #91965a 50%,
+      #8b5746 75%, 
+      #8c5637 100%
+      );
   font-family:"Georgia", serif;
   color: beige;
   font-size: 20px;
@@ -13,10 +45,25 @@
   margin-right: 30px;
 }
 
-h3 {
-  margin-top: 40px;
+.hero-summary {
   text-align: left;
-  letter-spacing: 5px;
+  font-family:"Georgia", serif;
+  font-size: 25px;  
+}
+
+h2 {
+  font-family:"Georgia", serif; 
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1.2s ease-out;
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 button {
@@ -42,34 +89,128 @@ button {
     box-shadow: 5px 5px 10px black;
     border-radius: 20px;	
 }
+
+.equation {
+  font-family: "Georgia", serif;
+  font-size: 26px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.fraction {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.fraction .top {
+  display: block;
+  border-bottom: 2px solid #341c02;
+  padding: 0 6px;
+}
+
+.fraction .bottom {
+  display: block;
+  padding-top: 4px;
+}
+
+.fraction.small {
+  font-size: 0.8em;
+}
 </style>
 
 <body>
+  <header>
 	<h1>Productivity-Time Dilation Calculator</h1>
+  <hr>
+		<h2><u><i>About The Project</i></u></h2>
+		<p class = "hero-summary">The Productivity-Time Dilation Calculator focus transforms our perception of time at work by reformulating Einstein's groundbreaking theory of time dilation.
+  </header>
+  <hr>
 
-		<h2>About The Project</h2>
-		<p>The Productivity-Time Dilation Calculator, codenamed<b> 'Project P'</b>, is playful exploration of how focus transforms our perception of time at work.<br>
-    <img src="pdt ui.png"> 
-    <button id="test"><a href="test.html">Click here to see how time bends to YOUR attention</a></button>
+  <section>
+    <h2><u><i>What Problem This Solves</i></u></h2>
+    <p>Project P transforms abstract productivity into hard numbers. By calculating your focus factor through the physics of time dilation, it reveals exactly how much real progress you're making, turning 'I worked all day' into measurable impact that drives results. <br>Formula Used: <br> 
+    <div class="equation">
+  Δt′ =
+  <span class="fraction">
+    <span class="top">Δt</span>
+    <span class="bottom">
+      √(1 −
+      <span class="fraction small">
+        <span class="top">v²</span>
+        <span class="bottom">c²</span>
+      </span>)
+    </span>
+  </span>
+  = γΔt
+</div>
+Where,<br>
+Δt -> Actual time: Time spent on work<br>
+Δt′ -> Dilated time or time 'bent': Real feel of time when you achieve flow state<br>
+<span class="fraction small">
+  <span class="top">v²</span>
+  <span class="bottom">c²</span>
+</span>
+-> How fast you are: In actuality, this is the focus that bends time to YOUR attention and exponentiates into many hours of work done.<br>
+Replaced
+      <span class="fraction small">
+        <span class="top">v²</span>
+        <span class="bottom">c²</span>
+      </span>
+with Focus Factor, a number YOU choose between 0 - 0.99, depending how good was your focus (Example: see Key Screen).
+</p>
+  </section>
+  <hr>
 
-		<h3><u>My motivation</u></h3>I was hell-bent on implementing the concept of time-dilation in daily life. I had noticed that a highly focused hour of work seems to stretch longer than a distracted one? <br>Project P quantifies this phenomenon, inspired by the concept of time dilation from physics; except here, the “speed” is your focus. <br>
+  <h2><u><i>Key Screen</i></u></h2>
 
-		<h3><u>Features</u></h3>
+    <section class = "fade-in">
+    <img src="pdt ui.png">
+    </section> 
+    <button id="test"><a href="pdt file.html">Click here to see how time bends to your attention</a></button>
+    <hr>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const fadeElements = document.querySelectorAll('.fade-in')
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible')
+            } else {
+              entry.target.classList.remove('is-visible');
+            }
+          }); 
+          threshold: 0.2;
+          rootMargin: "0px 0px -15% 0px"
+        });
+
+        fadeElements.forEach(el => observer.observe(el))
+      });
+    </script>
+
+		<h2><u><i>Why It's Designed This Way</i></u></h2>
+    I had noticed that a highly focused hour of work seems to stretch longer than a distracted one. <br>Project P quantifies this phenomenon, inspired by the concept of time dilation from physics; except here, the 'speed' is your focus. <br>
+
+		<h2><u><i>Features</i></u></h2>
 		<ul>
 			<li>Calculates perceived (dilated) work time based on your focus</li> 
 			<li>Validates user input for realistic focus values</li> 
-			<li>Playful, science-inspired interface</li>
+			<li>Experimental interface, inspired from Albert Einstein's Theory of Special Relativity</li>
 		</ul>
-		<h3><u>Tech Stack</u></h3>
+
+		<h2><u><i>Tech Stack</i></u></h2>
 		<ul>
-			<li><b>Python</b></li>
-			<li><b>NumPy library</b> for mathematical operation</li>
-      <li><b>JavaScript</b> to enable web interactivity</li>
-      <li><b>HTML</b> and <b>CSS</b> for stylizing the UI.</li>
+			<li>Python(core logic, click 'Enter the archive' to access the code)</li>
+			<li>NumPy library for mathematical operation</li>
+      <li>JavaScript to enable web interactivity</li>
+      <li>HTML and CSS for stylizing the UI.</li>
 		</ul>
-		
+
 		<a href = "https://github.com/joshua-spec-pixel/prod-time-dilation/blob/main/productive time dilation.py">
-		<button type="button"><b>Project P: Source Code</b></button>
+		<button type="button"><b>Enter the archive</b></button>
 	</a>
 		</p>
 </body>
