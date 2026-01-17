@@ -11,7 +11,7 @@
 
 
 ### 4. Project 2C:
-   <img width="1007" height="1442" alt="image" src="https://github.com/user-attachments/assets/c6edadee-ea7e-4f33-898d-6a18bd6d41dd" />
+<img width="1080" height="1920" alt="Brown Aesthetic Autumn Fall Photo Collage Instagram Story" src="https://github.com/user-attachments/assets/68aa5780-3517-44ff-a2f9-6f746402fb7c" />
 
 ### 5. Project MT:
    <img width="1007" height="1562" alt="image" src="https://github.com/user-attachments/assets/a3ad70af-03de-44ab-81db-c3d191fe3eaa" />
