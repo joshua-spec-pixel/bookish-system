@@ -1,10 +1,56 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+
+@media screen and (min-width: 600px) {
+	.container {
+		flex-direction: row;
+	}
+}
+
+header {
+	background:
+    	radial-gradient(
+      	circle at top,
+      	rgba(0,0,0,0.08),
+      	transparent 70%
+    	);
+  	padding: 40px 40px 10px;
+  	border-radius: 24px;	
+}
+
+h2 {
+	font-family:"Georgia", serif;	
+}
+
 body {
-  background: linear-gradient(90deg, #54363b, #ceadae);
+  background: 
+  	linear-gradient(
+  		180deg, 
+  		#54363b 0%,
+  		#725357 25%,
+		#917174 50%,
+		#af8f91 75%,
+  		#ceadae 100%
+  	);
   font-family:"Georgia", serif;
   color: beige;
   margin: 0;
   min-height: 100vh;
   font-size: 20px;
+}
+
+.hero-summary {
+	text-align: left;
+	font-family:"Georgia", serif;
+	font-size: 25px;	
+}
+
+.motivation {
+	text-align: left;
+	font-size: 25px;
 }
 
 img {
@@ -17,6 +63,17 @@ img {
      margin-bottom: 10px;
 }
 
+.fade-in {
+	opacity: 0;
+	transform: translateY(60px);
+	transition: all 1.2s ease-out;
+}
+
+.fade-in.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
 button {
 		background: linear-gradient(#bba591, #f3efe8);
 		font-size: 20px;
@@ -27,12 +84,6 @@ button {
 		height: 100px;
 		box-shadow: 5px 5px 10px black;
 		border-radius: 20px;
-}
-
-h3 {
-	margin-top: 40px;
-	text-align: left;
-    letter-spacing: 5px;
 }
 
 #test-cipher {
