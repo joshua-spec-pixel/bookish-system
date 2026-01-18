@@ -29,39 +29,45 @@
       'M': '--', 'N': '-.', 'O': '---', 'P': '.--.', 'Q': '--.-', 'R': '.-.',
       'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-',
       'Y': '-.--', 'Z': '--..',
+
+      ',': '--..--', '?': '..--..',
+
       '1': '.----', '2': '..---', '3': '...--', '4': '....-', '5': '.....',
       '6': '-....', '7': '--...', '8': '---..', '9': '----.', '0': '-----',
       '-': '-....-', '/': ' ', ' ': '/'
     };
 
-    function encrypt(message) {
+    function encrypt(message)  {
       let cipher = [];
       for (let letter of message) {
+        if (letter === '\n') {
+          cipher.push('/');
+          continue;
+        }
+
         let upperLetter = letter.toUpperCase();
+
         if (morse_code_dict[upperLetter] !== undefined) {
           cipher.push(morse_code_dict[upperLetter]);
-        } else if (letter === ' ') {
-          cipher.push('/');
-        } else {
-          cipher.push('?');
         }
-      }
-      return cipher.join(' ');
-    }
+        }
 
-    function decrypt(message) {
-      let decipher = [];
-      let reverse_dict = Object.fromEntries(Object.entries(morse_code_dict).map(([k, v]) => [v, k]));
-      let codes = message.trim().split(' ');
-      for (let code of codes) {
-        if (code === '') continue;
-        if (reverse_dict[code] !== undefined) {
-          decipher.push(reverse_dict[code]);
-        } else {
-          decipher.push('?');
-        }
+        return cipher.join(' ');
       }
-      return decipher.join('');
+
+    function decrypt(message){
+      let reverse_dict = Object.fromEntries(
+        Object.entries(morse_code_dict).map(([k, v]) => [v, k])
+        );
+
+      return message
+      .trim()
+      .split(' ')
+      .map(code => {
+        if (code === '/') return ' ';
+        return reverse_dict[code] || '';
+      })
+      .join('');
     }
 
     function processMorse() {
