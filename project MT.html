@@ -4,34 +4,75 @@
 	<title>Project MT</title>
 </head>
 <body>
-		<h1>The Vintage Journal-Timer</h1>
-		<h2>The Window</h2>
+	<header>
+		<h1>Morse Code Translator</h1>
+		<hr>
+		<h2><u><i>About The Project</i></u></h2>
+		<p class = "hero-summary">
+			Project MT is a digital toolkit for anyone interested in Morse code communication, whether you're a hobbyist, a student, or an explorer of classic cryptography.
+		</p>
+	</header>
+	<hr>
 
-		<h2>About The Project</h2>
-		<p>The Morse Code Translator codenamed <b>'Project MT'</b>, is a digital toolkit for anyone interested in Morse code communication—whether you're a hobbyist, student, or explorer of classic cryptography.<br>
+	<section>
+		<h2><u><i>What Problem This Solves</i></u></h2>
+		<p>
+			Morse code is an essential survival skill and good hobby to learn and with the help of Project MT, the interactive and easily operable UI, users can practice ciphering and deciphering this algorithm.
+		</p>
+	</section>
+	<hr>
+
+	<h2><u><i>Key Screen</i></u></h2>
+	<section class = "fade-in">
 		<img src="Morse Code Translator.png" alt="Menu Screenshot">
-		<button><a href="morse code.html">Click here to play with dots and dashes</a></button>
+	</section>
+		<button>
+			<a href="morse code.html">
+				Click here to encode and decode
+			</a>
+		</button>
+	<hr>
 		
-		<h3><u>My motivation</u></h3>As someone captivated by the elegance of Morse code and its historical significance, I wanted to create a tool that not only encodes and decodes messages but also makes learning and experimenting with Morse code engaging and accessible.
+		<h2><u><i>Why it's Designed this Way</i></u></h2>
+			<p>
+				This interactive Morse code translator combines real-time encoding/decoding with educational features. Project MT makes this historic communication system meaningful to learn, demonstrating both my interest in digital preservation and UX design.
+			</p>
 
-		<h3><u>Features</u></h3>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const fadeElements = document.querySelectorAll('.fade-in')
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('is-visible')
+					} else {
+						entry.target.classList.remove('is-visible');	
+					}
+				});
+				threshold: 0.2;
+				rootMargin: "0px 0px -15% 0px"
+			});
+
+			fadeElements.forEach(el => observer.observe(el))
+		});
+	</script>
+
+		<h2><u><i>Features</i></u></h2>
 		<ul>
-			<li>Encode text to Morse code and decode Morse code back to text</li>
+			<li>Encode and decode Morse code</li>
 			<li>Real-time interactive interface for practicing Morse code</li>
-			<li>Visual and audio output options for signals</li>
-			<li>Save and load messages for future reference</li>
 			<li>User-friendly, modern design with intuitive controls</li>
 		</ul>
 
-		<h3><u>Tech Stack</u></h3>
+		<h2><u><i>Tech Stack</i></u></h2>
 		<ul>
-			<li><b>Python</b> as raw code</li>
-			<li><b>HTML</b> and <b>CSS</b> to design the GUI</li>
-			<li><b>JavaScript</b> to run a web-friendly UI</li>
+			<li>Python (core logic, click 'Enter the archive' to access code)</li>
+			<li>JavaScript to run a web-friendly UI</li>
+			<li>HTML and CSS to design the GUI</li>
 		</ul>
 		<a href = "https://github.com/joshua-spec-pixel/morse-translator/blob/main/morse%20code%20translator.py">
-		<button type="button"><b>ProjectMT: Source Code</b></button>
+		<button type="button"><b>Enter the archive</b></button>
 	</a>
-		</p>
 </body>
 </html>
